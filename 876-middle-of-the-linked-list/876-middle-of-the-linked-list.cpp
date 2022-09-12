@@ -13,10 +13,10 @@ public:
     ListNode* middleNode(ListNode* head) {
         ListNode* fp = head;
         ListNode* sp = head;
-        while( sp != NULL && sp->next != NULL)
+        while(sp && sp->next)
         {
-            fp = fp->next;
             sp = sp->next->next;
+            fp = fp->next;            
         }
         return fp;
     }
