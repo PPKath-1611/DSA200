@@ -1,4 +1,7 @@
-class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
-        nums.sort(reverse=True)
-        return(nums[k-1])
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end(), greater<int>());
+        return nums[k-1];
+    }
+};
